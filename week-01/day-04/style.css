@@ -1,0 +1,21 @@
+p {
+  font-size: 36px;
+  color: rgb(0, 85, 102);
+  text-transform: capitalize;
+  line-height: 1;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+
+
+  border: 5px solid;
+  border-color: rgb(125, 206, 128);
+  padding: 25px 80px 100px 20px;
+  margin-bottom: 17px;
+  width: 350px;
+  background-color: rgb(14, 145, 161);
+
+
+
+  p.solid {border-style: solid;}
+}

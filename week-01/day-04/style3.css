@@ -1,0 +1,33 @@
+body {
+  font-size: 36px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-transform: capitalize;
+
+
+  font-family: 'Roboto', sans-serif;
+
+}
+
+section {
+  height: 260px;
+  border: 18px solid rgb(66, 133, 244);
+  margin: 7px;
+
+}
+ p {
+   text-align: center;
+   padding: 20px;
+ }
+
+.north {
+    background-color: rgb(230, 118, 118);
+    width: 350px;
+}
+
+
+.south {
+    background-color: rgb(169, 230, 230);
+    width: 350px;
+}
+}

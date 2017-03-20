@@ -1,0 +1,16 @@
+h1 {
+  color: blue;
+  font-family: 'Merriweather', serif;
+}
+h2 {
+  color: orange;
+  font-family: 'Merriweather', serif;
+}
+.main {
+  color: blue;
+  font-family: 'Merriweather', serif;
+}
+.sub {
+  color: red;
+  font-family: 'Merriweather', serif;
+}

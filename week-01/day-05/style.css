@@ -1,0 +1,89 @@
+.profilepic{
+  margin-left: 80px;
+  margin-right: 80px;
+  position: absolute;
+  width: 90%;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  position: relative;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+blockquote {
+  background: #444;
+  color: white;
+  font-size: 44px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 800px;
+}
+
+h1 {
+  font-size: 70px;
+  margin: 0 0 60px 0;
+  padding: 280px 100px 0 0;
+}
+
+h2 {
+  font-family: 'Josefin Sans', sans-serif;  margin: 50px 0 50px 0;
+  text-transform: uppercase;
+}
+
+h1,
+blockquote,
+h4 {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;  margin: 30px 0 30px 0;
+}
+
+h3,
+li,
+article {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  margin: 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+}
+
+hr {
+  background-color: #000;
+  border: 10;
+  color: #f00;
+  height: 3px;
+  width: 110%;
+}
+
+ul {
+  margin: 10px 0 40px 0;
+}
+
+.h1cut {
+  font-size: 30px;
+}
+
+ .quotation {
+   font-size: 120px;
+}
