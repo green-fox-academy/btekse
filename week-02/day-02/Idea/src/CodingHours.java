@@ -20,6 +20,6 @@ public class CodingHours {
   double b = a * 100;
 
   System.out.println ("You coding: " + (daily * weeks) + " hours during the academy.");
-  System.out.println ("It means that you'll coding the " + ((52.0 / 168) *100) + "% of your time during Green Fox.");
+  System.out.println ("It means that you'll coding the " + ((52.0 / 168) *  100) + "% of your time during Green Fox.");
   }
 }
