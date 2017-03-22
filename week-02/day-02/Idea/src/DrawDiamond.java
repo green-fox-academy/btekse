@@ -26,7 +26,7 @@ public class DrawDiamond {
     System.out.println("Number: ");
     int n1 = myScanner.nextInt();
 
-    for (int i = 0; i < n1; i++) {
+    for (int i = 0; i < n1 / 2; i++) {
 
       for (int j = (n1 - 1) - i; j > 0; j--) {
         System.out.print(" ");
