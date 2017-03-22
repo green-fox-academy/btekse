@@ -10,7 +10,7 @@ public class Doubling {
       int ak = 123;
       System.out.println(doubling(ak));
     }
-  
+
   public static int doubling(int num) {
     return num * 2;
   }
