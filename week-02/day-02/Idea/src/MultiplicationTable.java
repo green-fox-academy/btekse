@@ -23,7 +23,7 @@ public class MultiplicationTable {
 
     Scanner myScanner = new Scanner(System.in);
 
-    System.out.println("Enter number: ");
+    System.out.println("Enter number:");
     int n1 = myScanner.nextInt();
 
     for (int i = 1; i <= 10; i++) {
