@@ -14,15 +14,18 @@ public class Sum {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter number: ");
     int x = scanner.nextInt();
-    sum(x);
+    System.out.println(sum(x));
   }
 
-  public static void sum(int arg) {
+  public static int sum(int arg) {
 
     int summary = 0;
     for (int i = 0; i < arg; i++) {
       summary += i;
     }
-    System.out.println(summary);
+
+    return summary;
+
   }
 }
+
