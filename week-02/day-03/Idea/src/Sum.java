@@ -17,7 +17,7 @@ public class Sum {
     System.out.println(sum(x));
   }
 
-  public static int sum(int arg) {
+  public static int sum (int arg) {
 
     int summary = 0;
     for (int i = 0; i < arg; i++) {
