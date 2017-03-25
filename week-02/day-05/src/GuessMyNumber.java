@@ -16,7 +16,7 @@ public class GuessMyNumber {
     int ln = myScanner.nextInt();
 
     Random rand = new Random();
-    int rn = rand.nextInt((rng + 1));
+    int rn = rand.nextInt(rng + 1);
     // System.out.println(rn); // to be removed later
 
     for (int l = ln; l > 0; l--) {
@@ -27,7 +27,8 @@ public class GuessMyNumber {
       int n1 = myScanner.nextInt();
 
       if (n1 == rn) {
-        System.out.println("Congratulations. My number was: " + rn + ". You won!");
+        System.out.println("Congratulations. My number was: " + rn + "." +
+          " You won!");
         return;
       } else if (n1 > rn)
         System.out.println("Too high.");
