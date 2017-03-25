@@ -11,17 +11,16 @@ public class Palindrome {
 
     Scanner myScanner = new Scanner(System.in);
     System.out.println("Enter the word: ");
-    int reversed = myScanner.nextInt();
+    String reversed = myScanner.next();
 
     //String reversed = w;
 
     StringBuilder input = new StringBuilder();
     input.append(reversed);
-    input = input.reverse();
+    input.reverse();
 
-    for (int i = 0; i < input.length(); i++)
+    System.out.println(reversed + input);
 
-      System.out.print(input.charAt(i));
   }
 }
 
