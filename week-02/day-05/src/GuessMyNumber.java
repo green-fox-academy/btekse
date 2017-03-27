@@ -2,10 +2,6 @@
  * Created by Balázs on 2017. 03. 23..
  */
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 import java.util.Random;
 

@@ -14,8 +14,6 @@ public class Palindrome {
     System.out.println("Enter the word: ");
     String reversed = myScanner.next();
 
-    //String reversed = w;
-
     StringBuilder input = new StringBuilder();
     input.append(reversed);
     input.reverse();
