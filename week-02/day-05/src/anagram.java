@@ -1,6 +1,7 @@
 /**
  * Created by Balázs on 2017. 03. 25..
  */
+
 import java.util.Scanner;
 
 
@@ -26,7 +27,6 @@ public class anagram {
       System.out.println("They are anagrams");
     else
       System.out.println("They aren't anagrams");
-
 
 
   }

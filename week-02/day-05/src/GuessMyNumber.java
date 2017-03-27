@@ -14,9 +14,8 @@ public class GuessMyNumber {
 
     Scanner myScanner = new Scanner(System.in);
 
-  boolean game = true;
-  while(game)
-    { // addig fut, ameddig ez true
+    boolean game = true;
+    while (game) { // addig fut, ameddig ez true
 
 
       System.out.println("Enter the maximum range:");
@@ -48,7 +47,6 @@ public class GuessMyNumber {
       }
 
 
-
       boolean iscorrectanswer = false;
       while (!iscorrectanswer) {
         System.out.println("New game (y/n)?");
@@ -58,9 +56,8 @@ public class GuessMyNumber {
         } else if ("n".equals(newgame)) {
           game = false;
           iscorrectanswer = true;
-          }
-          else
-          System.out.println("Bad answer: "+newgame+" Try another.");
+        } else
+          System.out.println("Bad answer: " + newgame + " Try another.");
       }
 
     }
