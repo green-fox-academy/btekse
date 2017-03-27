@@ -15,5 +15,3 @@ public class running {
     System.out.println("Hi");
   }
 }
-
-}
