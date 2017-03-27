@@ -45,7 +45,7 @@ public class GuessMyNumber {
 
       boolean iscorrectanswer = false;
       while (!iscorrectanswer) {
-        System.out.println("New game (y/n)?");
+        System.out.println("I won. My number was: " + rn + ". New game (y/n)?");
         String newgame = myScanner.next();
         if ("y".equals(newgame)) {
           iscorrectanswer = true;
@@ -53,7 +53,7 @@ public class GuessMyNumber {
           game = false;
           iscorrectanswer = true;
         } else
-          System.out.println("Bad answer: " + newgame + " Try another.");
+          System.out.println("Bad answer: " + newgame + ". Try another.");
       }
 
     }
