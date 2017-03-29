@@ -11,19 +11,23 @@ import java.awt.*;import javax.swing.*;
 public class PurpleSteps3d {
 
   public static Color PURPLE = new Color(128, 0, 128);
+
   public static void mainDraw(Graphics g) {
     // reproduce this:
     // [https://github.com/greenfox-academy/teaching-materials/blob/master/exercises/drawing/purple-steps-3d/r4.png]
-    int steps = 0;
-    for (int i = 1; i < 7; i++) {
-      int size = 10 * i;
-      steps = size + size;
-      g.setColor(PURPLE);
-      g.fill3DRect(steps, steps, size, size, true);
+    int size = 5;
+    int pos = 5;
+    for (int i = 0; i < 6; i++) {
 
+      g.setColor(PURPLE);
+      g.fill3DRect(pos, pos, size, size, true);
+
+      pos += size;
+      size += size;
     }
   }
-    //    Don't touch the code below
+
+  //    Don't touch the code below
 
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
@@ -42,5 +46,6 @@ public class PurpleSteps3d {
 
     }
   }
-
 }
+
+
