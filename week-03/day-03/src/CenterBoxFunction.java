@@ -47,6 +47,7 @@ public class CenterBoxFunction {
       }
 
 
+
   //    Don't touch the code below
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
