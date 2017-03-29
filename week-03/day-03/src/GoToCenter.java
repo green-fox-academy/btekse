@@ -31,10 +31,10 @@ public class GoToCenter {
       System.out.println("Enter line#2 starting y coordinate: ");
       int y2coord = scanner.nextInt();
 
-      System.out.println("Enter line#2 starting x coordinate: ");
+      System.out.println("Enter line#3 starting x coordinate: ");
       int x3coord = scanner.nextInt();
 
-      System.out.println("Enter line#2 starting y coordinate: ");
+      System.out.println("Enter line#3 starting y coordinate: ");
       int y3coord = scanner.nextInt();
 
 
