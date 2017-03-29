@@ -10,7 +10,7 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class HorizontalLines {
 
-  public static void mainDraw(Graphics graphics){
+  public static void mainDraw(Graphics graphics) {
     // create a line drawing function that takes 2 parameters:
     // the x and y coordinates of the line's starting point
     // and draws a 50 long horizontal line from that point.
