@@ -14,13 +14,13 @@ public class FourRectangles {
     // draw four different size and color rectangles.
 
     graphics.setColor(Color.GREEN);
-    graphics.drawRect(10, 10, 50, 140);
+    graphics.fillRect(10, 10, 50, 140);
     graphics.setColor(Color.BLUE);
-    graphics.drawRect(10, 10, 80, 110);
+    graphics.fillRect(10, 10, 80, 110);
     graphics.setColor(Color.YELLOW);
-    graphics.drawRect(10, 10, 110, 80);
+    graphics.fillRect(10, 10, 110, 80);
     graphics.setColor(Color.RED);
-    graphics.drawRect(10, 10, 140, 50);
+    graphics.fillRect(10, 10, 140, 50);
 
 
   }
