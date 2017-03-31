@@ -21,15 +21,15 @@ public class Sierpinsky {
       return;
     } else {
 
-      rectPosition(g, x + (size / 3), y, size / 3); //upcenter
-      rectPosition(g, x, y + (size/3), size/3); //leftcenter
-      rectPosition(g, x + (2*(size/3)), y + (size/3), size/3); //rightcenter
-      rectPosition(g, x + (size / 3), y + (2*(size/3)), size/3); //downcenter
+      rectPosition(g, x + (size / 3), y, size / 3);
+      rectPosition(g, x, y + (size/3), size/3);
+      rectPosition(g, x + (2*(size/3)), y + (size/3), size/3);
+      rectPosition(g, x + (size / 3), y + (2*(size/3)), size/3);
 
-      rectPosition(g, x, y, size / 3); //upleft
-      rectPosition(g, x, y + (2*(size/3)), size/3); //downleft
-      rectPosition(g, x + (2*(size/3)), y + (2*(size/3)), size/3); //rightdown
-      rectPosition(g, x + (2*(size/3)), y, size/3); //rightup
+      rectPosition(g, x, y, size / 3);
+      rectPosition(g, x, y + (2*(size/3)), size/3);
+      rectPosition(g, x + (2*(size/3)), y + (2*(size/3)), size/3);
+      rectPosition(g, x + (2*(size/3)), y, size/3);
     }
   }
 
