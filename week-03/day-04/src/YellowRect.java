@@ -8,8 +8,6 @@ import java.awt.*;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class YellowRect {
-  //public static int width = 2000;
-  //public static int height = 2000;
 
   public static void mainDraw(Graphics g) {
     rectPosition(g, 0, 0, 900);
