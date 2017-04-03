@@ -8,7 +8,7 @@ public class PostIt {
 
 
   public void textwrite() {
-    System.out.println("Your text: " + this.text + ". Includes: "  + this.backgroundColor + " colored background and " + this.textColor + " text color.");
+    System.out.println("Your text: " + this.text + ". Includes: " + this.backgroundColor + " colored background and " + this.textColor + " text color.");
   }
 
 }
