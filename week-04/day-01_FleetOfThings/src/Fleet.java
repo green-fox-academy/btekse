@@ -3,7 +3,6 @@
  */
 import java.util.ArrayList;
 
-
 public class Fleet {
   private ArrayList<Thing> things;
 
