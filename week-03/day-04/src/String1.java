@@ -6,16 +6,14 @@
 public class String1 {
   public static void main(String[] args) {
     String s = "hello world";
-    char x = 'o';
-    char y = 'd';
     System.out.println(xchange(s));
   }
 
   public static String xchange(String s) {
-    char x = 'l';
-    char y = 'z';
+    char x = 'h';
+    char y = 'y';
     if (s.length() < 1) {
-      return s;
+        return s;
     } else {
       if (x == s.charAt(0)) {
         return y + xchange(s.substring(1));
