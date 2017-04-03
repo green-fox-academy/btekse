@@ -3,26 +3,13 @@
  */
 class PostItInfo {
   public static void main(String args[]) {
-    PostIt postIt1 = new PostIt();
-    postIt1.backgroundColor = "orange";
-    postIt1.textColor = "blue";
-    postIt1.text = "Idea1";
+    PostIt postIt1 = new PostIt("orange", "Idea1", "blue");
+    PostIt postIt2 = new PostIt("pink", "Awesome", "black");
+    PostIt postIt3 = new PostIt("yellow", "Suberb!", "green");
 
-    PostIt postIt2 = new PostIt();
-    postIt2.backgroundColor = "pink";
-    postIt2.textColor = "black";
-    postIt2.text = "Awesome";
-
-    PostIt postIt3 = new PostIt();
-    postIt3.backgroundColor = "yellow";
-    postIt3.textColor = "green";
-    postIt3.text = "Superb!";
-
-    //System.out.println(postIt1.text);
-
-    postIt1.textwrite();
-    postIt2.textwrite();
-    postIt3.textwrite();
+    System.out.println(postIt1.toString());
+    System.out.println(postIt2.toString());
+    System.out.println(postIt3.toString());
 
   }
 }
