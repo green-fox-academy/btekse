@@ -16,6 +16,9 @@ public class Dicesmain {
     myDice.reroll(4);
     myDice.getCurrent();
 
+    for (int rolled : myDice.getCurrent()) {
+      System.out.println(rolled);
+
   // Additional solution
     /*int fullsix = 0;
 
@@ -29,8 +32,7 @@ public class Dicesmain {
       }
     }
 */
-    for (int rolled : myDice.getCurrent()) {
-      System.out.println(rolled);
+
     }
   }
 }
