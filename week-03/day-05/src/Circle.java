@@ -15,7 +15,7 @@ public class Circle {
   public static void ovalPosition(Graphics g, int x, int y, int size) {
 
 
-    if (size < 10) {
+    if (size < 200) {
       return;
     } else {
       g.setColor(Color.BLACK);
