@@ -4,22 +4,30 @@
 public class Plant {
 
 
- public String color;
- public int minimalWaterAmount;
- public double absorb;
+  public String color;
+  public String type;
+  public double minimalWaterAmount;
+  public double actualWaterAmount;
+  public double absorb;
 
-  Plant(String color, int minimalWaterAmount, double absorb)
-  this.color = color;
-  this.minimalWaterAmount = minimalWaterAmount;
-  this.absorb = absorb;
+  Plant(String color, String type, double minimalWaterAmount, double absorb, double actualWaterAmount) {
+    this.color = color;
+    this.type = type;
+    this.minimalWaterAmount = minimalWaterAmount;
+    this.actualWaterAmount = actualWaterAmount;
+    this.absorb = absorb;
+  }
 
-  public void currentWaterAmount () {
-    System.out.println(minimalWaterAmount);
+  public boolean thirsty() {
+    return minimalWaterAmount > actualWaterAmount;
   }
-  public void currentAbsorb () {
-    System.out.println(absorb);
+
+  public void watering(double water) {
+    actualWaterAmount = actualWaterAmount + (water * absorb);
   }
-  public void plantcolor () {
-    System.out.println(color);
+
+  @Override
+  public String toString() {
+    return "The " + color + " " + type + (thirsty() ? " needs" : " doesn't need") + " water.";
   }
 }
