@@ -24,6 +24,6 @@ public class LagopusClass {
   }
 
   public void info() {
-    System.out.println("Lagopus" + className + " class has" + students.size + " students and" + mentors.size + " mentors.");
+    System.out.println("Lagopus" + className + " class has" + students.size() + " students and" + mentors.size() + " mentors.");
   }
 }
