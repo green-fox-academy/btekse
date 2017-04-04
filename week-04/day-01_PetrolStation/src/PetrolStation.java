@@ -6,7 +6,7 @@ public class PetrolStation {
   public static void main(String[] args) {
 
     Station station = new Station(80);
-    Car car = new Car(10, 100);
+    Car car = new Car(30, 100);
 
     System.out.println("Car gas amount: " + car.gasAmount + " Station: " + station.gasAmount);
     station.refill(car);
