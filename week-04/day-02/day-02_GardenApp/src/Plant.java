@@ -13,7 +13,6 @@ public class Plant {
   public void currentWaterAmount () {
     System.out.println(minimalWaterAmount);
   }
-
   public void currentAbsorb () {
     System.out.println(absorb);
   }
