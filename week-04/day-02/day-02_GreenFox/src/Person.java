@@ -10,7 +10,7 @@ public class Person {
     return this.name;
   }
 
-  public String getAge() {
+  public int getAge() {
     return this.age;
   }
 
@@ -23,16 +23,16 @@ public class Person {
   }
 
   public void getGoal() {
-    System.out.println("My goal is live for the moment.");
+    System.out.println("My goal is: live for the moment.");
   }
 
-  Person() {
+  public Person() {
     this.name = "Jane Doe";
     this.age = 30;
     this.gender = "female";
   }
 
-  Person(String name, int age, String gender) {
+  public Person(String name, int age, String gender) {
     this.name = name;
     this.age = age;
     this.gender = gender;
