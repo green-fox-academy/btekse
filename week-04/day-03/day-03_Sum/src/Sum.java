@@ -1,19 +1,20 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sum {
+  List<Integer> integersList = new ArrayList<>();
 
-  public Sum(){
+  public Sum(List<Integer> integersList) {
+    if (integersList != null) {
+      this.integersList = integersList;
+    }
   }
 
-  public int sum(List<Integer> numbers){
-    int result = 0;
-
-    for (int i : numbers) {
-      result += i;
+  public int addNumbers() {
+    int sum = 0;
+    for (int i : integersList) {
+      sum += i;
     }
-    if (result == 0){
-      return 0;
-    }
-    return result;
+    return sum;
   }
 }

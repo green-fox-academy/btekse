@@ -1,32 +1,38 @@
 import org.junit.Test;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
 import static junit.framework.TestCase.assertEquals;
 
 public class SumTest {
 
   @Test
-  public void testSumClass() throws Exception {
-  List<Integer> numbers = new ArrayList<Integer>(Arrays.asList());
-    Sum newList = new Sum();
-    assertEquals(0, newList.sum(numbers));
+  public void addNumbers() throws Exception {
+    List<Integer> list = new ArrayList<>();
+    Sum sum = new Sum(list);
+    list.add(5);
+    list.add(6);
+    assertEquals(11, sum.addNumbers());
   }
 
   @Test
-  public void testSumNumbers() throws Exception {
-    List<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,2,3,4,5));
-    Sum newList = new Sum();
-    assertEquals(15, newList.sum(numbers));
+  public void addNumbersWithOneElement() throws Exception {
+    List<Integer> list = new ArrayList<>();
+    Sum sum = new Sum(list);
+    list.add(2);
+    assertEquals(2, sum.addNumbers());
   }
 
   @Test
-  public void testSumOneElement() throws Exception {
-    List<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1));
-    Sum newList = new Sum();
-    assertEquals(1, newList.sum(numbers));
+  public void addNumbersWithNull() throws Exception {
+    List<Integer> list = new ArrayList<>();
+    Sum sum = new Sum(list);
+    assertEquals(0, sum.addNumbers());
   }
-
+  @Test
+  public void addNumbersWithZero() throws Exception {
+    List<Integer> list = new ArrayList<>();
+    Sum sum = new Sum(list);
+    list.add(0);
+    assertEquals(0, sum.addNumbers());
+  }
 }
