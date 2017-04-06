@@ -1,6 +1,3 @@
-/**
- * Created by Balázs on 2017. 04. 04..
- */
 public class Main {
   public static void main(String[] arsg) {
     Garden garden = new Garden();
@@ -9,16 +6,17 @@ public class Main {
     garden.addPlant(new Flower("yellow"));
     garden.addPlant(new Flower("blue"));
 
-    for (Plant plant : garden.myPlants) {
-      System.out.println(plant.toString());
-    }
+    printGardenState(garden);
+
     garden.watering(40);
     System.out.println("\nWatering with 40");
-    for (Plant plant : garden.myPlants) {
-      System.out.println(plant.toString());
-    }
+    printGardenState(garden);
+
     garden.watering(70);
     System.out.println("\nWatering with 70");
+    printGardenState(garden);
+  }
+  private static void printGardenState(Garden garden) {
     for (Plant plant : garden.myPlants) {
       System.out.println(plant.toString());
     }
