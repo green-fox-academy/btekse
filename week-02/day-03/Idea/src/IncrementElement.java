@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by Balázs on 2017. 03. 28..
  */
@@ -10,7 +12,8 @@
 public class IncrementElement {
   public static void main(String[] args) {
     int[] t = {1, 2, 3, 4, 5};
-    t[2] = +2;
-    System.out.println(t[3]);
+    t[2] += 10;
+    System.out.println("The third element is: " + t[2]);
+    System.out.println("The arrays numbers are: " + Arrays.toString(t));
   }
 }
