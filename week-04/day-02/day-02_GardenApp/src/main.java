@@ -16,9 +16,10 @@ public class Main {
     System.out.println("\nWatering with 70");
     printGardenState(garden);
   }
+
   private static void printGardenState(Garden garden) {
     for (Plant plant : garden.myPlants) {
-      System.out.println(plant.toString());
+    System.out.println(plant.toString());
     }
   }
 }

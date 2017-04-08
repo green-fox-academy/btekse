@@ -3,7 +3,6 @@
  */
 public class Plant {
 
-
   public String color;
   public String type;
   public double minimalWaterAmount;
