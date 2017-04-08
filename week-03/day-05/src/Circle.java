@@ -1,6 +1,7 @@
 /**
  * Created by Balázs on 2017. 03. 31..
  */
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -16,14 +17,14 @@ public class Circle {
 
 
     if (size < 200) {
-      return;
+
     } else {
       g.setColor(Color.BLACK);
       g.drawOval(x, y, size, size);
 
-      ovalPosition(g, x+size / 4, y, size / 2);
-      ovalPosition(g, x+size /75, y+2*(size /6), size/2);
-      ovalPosition(g, x+size - (size/2) - (size/75), y+2*(size/6), size/2);
+      ovalPosition(g, x + size / 4, y, size / 2);
+      ovalPosition(g, x + size / 75, y + 2 * (size / 6), size / 2);
+      ovalPosition(g, x + size - (size / 2) - (size / 75), y + 2 * (size / 6), size / 2);
 
     }
   }

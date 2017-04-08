@@ -9,10 +9,11 @@ import java.util.Arrays;
 
 public class DoubleItems {
   public static void main(String[] args) {
+    int sumAll = 0;
     int[] ag = {3, 4, 5, 6, 7};
     for (int a = 0; a < ag.length; a++) {
-      ag[a]=ag[a] * 2;
+      sumAll = sumAll + ag[a];
     }
-    System.out.println(Arrays.toString(ag));
+    System.out.println(sumAll);
   }
 }
