@@ -92,20 +92,28 @@ public class Board extends JComponent implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     // When the up or down keys hit, we change the position of our box
-    if (e.getKeyCode() == KeyEvent.VK_UP && testBoxY > 0 && wallMatrix[testBoxY/DIMENSION - 1][testBoxX/DIMENSION] == 1) {
-      testBoxY -= DIMENSION;
+    if (e.getKeyCode() == KeyEvent.VK_UP) {
       heroStart = heroUp;
-    } else if (e.getKeyCode() == KeyEvent.VK_DOWN && testBoxY < 10 * DIMENSION && wallMatrix[testBoxY/DIMENSION + 1][testBoxX/DIMENSION] == 1) {
-      testBoxY += DIMENSION;
+      if (testBoxY > 0 && wallMatrix[testBoxY / DIMENSION - 1][testBoxX / DIMENSION] == 1) {
+        testBoxY -= DIMENSION;
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
       heroStart = heroDown;
-    } else if (e.getKeyCode() == KeyEvent.VK_LEFT && testBoxX > 0 && wallMatrix[testBoxY/72][testBoxX/DIMENSION - 1] == 1) {
-      testBoxX -= DIMENSION;
+      if (testBoxY < 10 * DIMENSION && wallMatrix[testBoxY / DIMENSION + 1][testBoxX / DIMENSION] == 1) {
+        testBoxY += DIMENSION;
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
       heroStart = heroLeft;
-    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT && testBoxX < 9 * DIMENSION && wallMatrix[testBoxY/72][testBoxX/72+1] == 1) {
-      testBoxX += DIMENSION;
+      if (testBoxX > 0 && testBoxY > 0 && wallMatrix[testBoxY / 72][testBoxX / DIMENSION - 1] == 1) {
+        testBoxX -= DIMENSION;
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
       heroStart = heroRight;
-
+      if (testBoxX < 9 * DIMENSION && wallMatrix[testBoxY / 72][testBoxX / 72 + 1] == 1) {
+        testBoxX += DIMENSION;
+      }
     }
+
     // and redraw to have a new picture with the new coordinates
     repaint();
   }
