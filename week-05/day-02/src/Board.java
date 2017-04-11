@@ -104,7 +104,7 @@ public class Board extends JComponent implements KeyListener {
       }
     } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
       heroStart = heroLeft;
-      if (testBoxX > 0 && testBoxY > 0 && wallMatrix[testBoxY / 72][testBoxX / DIMENSION - 1] == 1) {
+      if (testBoxX > 0 /*&& testBoxY > 0 */&& wallMatrix[testBoxY / 72][testBoxX / DIMENSION - 1] == 1) {
         testBoxX -= DIMENSION;
       }
     } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
