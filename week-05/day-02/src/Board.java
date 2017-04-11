@@ -7,13 +7,30 @@ public class Board extends JComponent implements KeyListener {
 
   int testBoxX;
   int testBoxY;
-  static final int DIMENSION = 72;
+  String heroLeft;
+  String heroRight;
+  String heroUp;
+  String heroDown;
 
+  static final int DIMENSION = 72;
+  int[][] wallMatrix = new int[][]{
+    {1, 1, 1, 0, 1, 0, 1, 1, 1, 1},
+    {1, 1, 1, 0, 1, 0, 1, 0, 0, 1},
+    {1, 0, 0, 0, 1, 0, 1, 0, 0, 1},
+    {1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
+    {0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+    {1, 0, 1, 0, 1, 1, 1, 1, 0, 1},
+    {1, 0, 1, 0, 1, 0, 0, 1, 0, 1},
+    {1, 1, 1, 1, 1, 0, 0, 1, 0, 1},
+    {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
+    {1, 1, 1, 0, 1, 0, 0, 1, 0, 1},
+    {1, 0, 1, 0, 1, 0, 1, 1, 1, 1}
+  };
 
   public Board() {
     testBoxX = 0;
     testBoxY = 0;
-
+   
     // set the size of your draw board
     setPreferredSize(new Dimension(DIMENSION * 10, DIMENSION * 11));
     setVisible(true);
@@ -24,20 +41,6 @@ public class Board extends JComponent implements KeyListener {
     super.paint(graphics);
     // here you have a 720x720 canvas
     // you can create and draw an image using the class below e.g.
-
-    int[][] wallMatrix = new int[][]{
-      {1, 1, 1, 0, 1, 0, 1, 1, 1, 1},
-      {1, 1, 1, 0, 1, 0, 1, 0, 0, 1},
-      {1, 0, 0, 0, 1, 0, 1, 0, 0, 1},
-      {1, 1, 1, 1, 1, 0, 1, 1, 1, 1},
-      {0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
-      {1, 0, 1, 0, 1, 1, 1, 1, 0, 1},
-      {1, 0, 1, 0, 1, 0, 0, 1, 0, 1},
-      {1, 1, 1, 1, 1, 0, 0, 1, 0, 1},
-      {1, 0, 0, 0, 1, 1, 1, 1, 0, 1},
-      {0, 1, 1, 0, 1, 0, 0, 1, 0, 1},
-      {1, 0, 1, 0, 1, 0, 1, 1, 1, 1}
-    };
 
     //int posX = 0;
     //int posY = 0;
@@ -88,13 +91,13 @@ public class Board extends JComponent implements KeyListener {
   @Override
   public void keyReleased(KeyEvent e) {
     // When the up or down keys hit, we change the position of our box
-    if (e.getKeyCode() == KeyEvent.VK_UP && (testBoxY > 0)) {
+    if (e.getKeyCode() == KeyEvent.VK_UP && testBoxY > 0 && wallMatrix[testBoxY/DIMENSION - 1][testBoxX/DIMENSION] == 1) {
       testBoxY -= DIMENSION;
-    } else if (e.getKeyCode() == KeyEvent.VK_DOWN && (testBoxY < 10 * DIMENSION)) {
+    } else if (e.getKeyCode() == KeyEvent.VK_DOWN && testBoxY < 10 * DIMENSION && wallMatrix[testBoxY/DIMENSION + 1][testBoxX/DIMENSION] == 1) {
       testBoxY += DIMENSION;
-    } else if (e.getKeyCode() == KeyEvent.VK_LEFT && (testBoxX > 0)) {
+    } else if (e.getKeyCode() == KeyEvent.VK_LEFT && testBoxX > 0 && wallMatrix[testBoxY/72][testBoxX/DIMENSION - 1] == 1) {
       testBoxX -= DIMENSION;
-    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT && (testBoxX < 9 * DIMENSION)) {
+    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT && testBoxX < 9 * DIMENSION && wallMatrix[testBoxY/72][testBoxX/72+1] == 1) {
       testBoxX += DIMENSION;
     }
     // and redraw to have a new picture with the new coordinates
