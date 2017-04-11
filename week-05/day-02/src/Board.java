@@ -7,10 +7,11 @@ public class Board extends JComponent implements KeyListener {
 
   int testBoxX;
   int testBoxY;
-  String heroLeft;
-  String heroRight;
-  String heroUp;
-  String heroDown;
+  String heroLeft = "img/hero-left.png";
+  String heroRight = "img/hero-right.png";
+  String heroUp = "img/hero-up.png";
+  String heroDown = "img/hero-down.png";
+  String heroStart = "img/hero-down.png";
 
   static final int DIMENSION = 72;
   int[][] wallMatrix = new int[][]{
@@ -30,7 +31,7 @@ public class Board extends JComponent implements KeyListener {
   public Board() {
     testBoxX = 0;
     testBoxY = 0;
-   
+
     // set the size of your draw board
     setPreferredSize(new Dimension(DIMENSION * 10, DIMENSION * 11));
     setVisible(true);
@@ -54,7 +55,7 @@ public class Board extends JComponent implements KeyListener {
           wall.draw(graphics);
         }
       }
-      PositionedImage hero = new PositionedImage("img/hero-down.png", testBoxX, testBoxY);
+      PositionedImage hero = new PositionedImage(heroStart, testBoxX, testBoxY);
       hero.draw(graphics);
     }
   }
@@ -93,12 +94,17 @@ public class Board extends JComponent implements KeyListener {
     // When the up or down keys hit, we change the position of our box
     if (e.getKeyCode() == KeyEvent.VK_UP && testBoxY > 0 && wallMatrix[testBoxY/DIMENSION - 1][testBoxX/DIMENSION] == 1) {
       testBoxY -= DIMENSION;
+      heroStart = heroUp;
     } else if (e.getKeyCode() == KeyEvent.VK_DOWN && testBoxY < 10 * DIMENSION && wallMatrix[testBoxY/DIMENSION + 1][testBoxX/DIMENSION] == 1) {
       testBoxY += DIMENSION;
+      heroStart = heroDown;
     } else if (e.getKeyCode() == KeyEvent.VK_LEFT && testBoxX > 0 && wallMatrix[testBoxY/72][testBoxX/DIMENSION - 1] == 1) {
       testBoxX -= DIMENSION;
+      heroStart = heroLeft;
     } else if (e.getKeyCode() == KeyEvent.VK_RIGHT && testBoxX < 9 * DIMENSION && wallMatrix[testBoxY/72][testBoxX/72+1] == 1) {
       testBoxX += DIMENSION;
+      heroStart = heroRight;
+
     }
     // and redraw to have a new picture with the new coordinates
     repaint();
