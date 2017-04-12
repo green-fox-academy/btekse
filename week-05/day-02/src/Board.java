@@ -5,13 +5,13 @@ import java.awt.event.KeyListener;
 
 public class Board extends JComponent implements KeyListener {
 
-  int testBoxX;
-  int testBoxY;
-  String heroLeft = "img/hero-left.png";
-  String heroRight = "img/hero-right.png";
-  String heroUp = "img/hero-up.png";
-  String heroDown = "img/hero-down.png";
-  String heroStart = "img/hero-down.png";
+    int testBoxX;
+    int testBoxY;
+    String heroLeft = "img/hero-left.png";
+    String heroRight = "img/hero-right.png";
+    String heroUp = "img/hero-up.png";
+    String heroDown = "img/hero-down.png";
+    String heroStart = "img/hero-down.png";
 
   static final int DIMENSION = 72;
   int[][] wallMatrix = new int[][]{
