@@ -9,6 +9,7 @@ public class Board extends JComponent implements KeyListener {
 
   Map map = new Map();
   ArrayList<GameObject> objectList = new ArrayList<>();
+  Hero hero;
 
   public Board() {
 
@@ -19,19 +20,22 @@ public class Board extends JComponent implements KeyListener {
       }
     }
     // set the size of your draw board
-
-
+    hero = new Hero();
   }
 
   @Override
   public void paint(Graphics graphics) {
     super.paint(graphics);
     for (GameObject gameObject : objectList) {
-      PositionedImage hero = new PositionedImage(gameObject.getCostume(), gameObject.getPosX()*72, gameObject.getPosY()*72);
-      hero.draw(graphics);
+      paintGameObject(graphics, gameObject);
     }
+  paintGameObject(graphics, hero);
 
+  }
 
+  private void paintGameObject(Graphics graphics, GameObject gameObject) {
+    PositionedImage image = new PositionedImage(gameObject.getCostume(), gameObject.getPosX()*72, gameObject.getPosY()*72);
+    image.draw(graphics);
   }
 
   public static void main(String[] args) {

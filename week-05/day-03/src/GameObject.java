@@ -26,8 +26,7 @@ public class GameObject {
     return posY;
   }
 
-  @Override
+  /*@Override
   public String toString() {
-    return "[" + posX + " " + posY + "]";
-  }
+    return "[" + posX + " " + posY + "]";*/
 }

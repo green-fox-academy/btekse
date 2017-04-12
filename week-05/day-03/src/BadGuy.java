@@ -1,5 +1,7 @@
-/**
- * Created by Balázs on 2017. 04. 12..
- */
-public class BadGuy {
+public class BadGuy extends Character{
+
+  public BadGuy(int posX, int posY, String costume) {
+    super(posX, posY, costume);
+  }
+
 }
