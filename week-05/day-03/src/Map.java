@@ -23,14 +23,14 @@ public class Map {
 
 
 public void addMap() {
-  for (int i = 0; i < 10; i++) {
+  for (int i = 0; i < intMap.length; i++) {
     ArrayList<Tiles> lines = new ArrayList<>();
-    for (int j = 0; j < 10; j++) {
+    for (int j = 0; j < intMap[i].length; j++) {
       if (intMap[i][j] == 1) {
-        Tiles floor = new Tiles(i, j, "img/floor.png");
+        Tiles floor = new Tiles(j, i, "img/floor.png");
         lines.add(floor);
       } else {
-        Tiles wall = new Tiles(i, j, "img/wall.png");
+        Tiles wall = new Tiles(j, i, "img/wall.png");
         lines.add(wall);
       }
     }

@@ -76,6 +76,29 @@ public class Board extends JComponent implements KeyListener {
       testBoxY += 100;
     }*/
     // and redraw to have a new picture with the new coordinates
+    if (e.getKeyCode() == KeyEvent.VK_UP) {
+      hero.turn(Hero.Directions.UP);
+      if (hero.getPosY() > 0 && map.intMap[hero.getPosY() - 1][hero.getPosX()] == 1) {
+        hero.moveTo(hero.getPosX(), hero.getPosY() - 1);
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+      hero.turn(Hero.Directions.DOWN);
+      if (hero.getPosY() < map.intMap.length -1 && map.intMap[hero.getPosY() + 1][hero.getPosX()] == 1) {
+        hero.moveTo(hero.getPosX(), hero.getPosY() + 1);;
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+      hero.turn(Hero.Directions.LEFT);
+      if (hero.getPosX()> 0 && map.intMap[hero.getPosY()][hero.getPosX() - 1] == 1) {
+        hero.moveTo(hero.getPosX() - 1, hero.getPosY());
+      }
+    } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+      hero.turn(Hero.Directions.RIGHT);
+      if (hero.getPosX() < map.intMap[0].length-1 && map.intMap[hero.getPosY()][hero.getPosX() + 1] == 1) {
+        hero.moveTo(hero.getPosX() + 1, hero.getPosY());
+      }
+    }
+
+    // and redraw to have a new picture with the new coordinates
     repaint();
   }
 
