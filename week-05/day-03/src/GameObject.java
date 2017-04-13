@@ -1,8 +1,8 @@
 public class GameObject {
-   int posX;
-   int posY;
-   String costume;
-   Map map;
+  int posX;
+  int posY;
+  String costume;
+  Map map;
 
   public GameObject(int posX, int posY, String costume) {
     this.posX = posX;
@@ -13,15 +13,15 @@ public class GameObject {
   public GameObject() {
   }
 
-  public  String getCostume() {
+  public String getCostume() {
     return costume;
   }
 
-  public  int getPosX() {
+  public int getPosX() {
     return posX;
   }
 
-  public  int getPosY() {
+  public int getPosY() {
     return posY;
   }
 }

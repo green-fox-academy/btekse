@@ -113,8 +113,6 @@ public class Board extends JComponent implements KeyListener {
         testBoxX += DIMENSION;
       }
     }
-
-    // and redraw to have a new picture with the new coordinates
     repaint();
   }
 }

@@ -11,7 +11,6 @@ public class Hero extends Character {
   //static final String heroStart = "img/hero-down.png";
 
 
-
   public void turn(Directions direction) {
     switch (direction) {
       case UP:

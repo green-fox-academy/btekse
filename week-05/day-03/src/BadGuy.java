@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class BadGuy extends Character{
+public class BadGuy extends Character {
 
   static final String skeleton = "img/skeleton.png";
   static final String boss = "img/boss.png";
@@ -9,3 +9,5 @@ public class BadGuy extends Character{
     super(1, 1, skeleton);
   }
 }
+
+
