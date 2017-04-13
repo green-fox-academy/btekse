@@ -3,7 +3,6 @@ public class Character extends GameObject {
 
   public Character(int posX, int posY, String costume) {
     super(posX, posY, costume);
-    this.map = map;
   }
 
   public void moveTo(int posX, int posY) {
