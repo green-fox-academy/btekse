@@ -10,17 +10,18 @@ public class Board extends JComponent implements KeyListener {
   Map map = new Map();
   ArrayList<GameObject> objectList = new ArrayList<>();
   Hero hero;
+  BadGuy badGuy;
 
   public Board() {
 
     map.addMap();
     for (ArrayList<Tiles> tempList : map.getMap()) {
-      for(Tiles tiles : tempList) {
+      for (Tiles tiles : tempList) {
         objectList.add(tiles);
       }
     }
-    // set the size of your draw board
     hero = new Hero();
+    badGuy = new BadGuy();
   }
 
   @Override
@@ -29,12 +30,13 @@ public class Board extends JComponent implements KeyListener {
     for (GameObject gameObject : objectList) {
       paintGameObject(graphics, gameObject);
     }
-  paintGameObject(graphics, hero);
+    paintGameObject(graphics, hero);
+    paintGameObject(graphics, badGuy);
 
   }
 
   private void paintGameObject(Graphics graphics, GameObject gameObject) {
-    PositionedImage image = new PositionedImage(gameObject.getCostume(), gameObject.getPosX()*72, gameObject.getPosY()*72);
+    PositionedImage image = new PositionedImage(gameObject.getCostume(), gameObject.getPosX() * 72, gameObject.getPosY() * 72);
     image.draw(graphics);
   }
 
@@ -83,17 +85,18 @@ public class Board extends JComponent implements KeyListener {
       }
     } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
       hero.turn(Hero.Directions.DOWN);
-      if (hero.getPosY() < map.intMap.length -1 && map.intMap[hero.getPosY() + 1][hero.getPosX()] == 1) {
-        hero.moveTo(hero.getPosX(), hero.getPosY() + 1);;
+      if (hero.getPosY() < map.intMap.length - 1 && map.intMap[hero.getPosY() + 1][hero.getPosX()] == 1) {
+        hero.moveTo(hero.getPosX(), hero.getPosY() + 1);
+        ;
       }
     } else if (e.getKeyCode() == KeyEvent.VK_LEFT) {
       hero.turn(Hero.Directions.LEFT);
-      if (hero.getPosX()> 0 && map.intMap[hero.getPosY()][hero.getPosX() - 1] == 1) {
+      if (hero.getPosX() > 0 && map.intMap[hero.getPosY()][hero.getPosX() - 1] == 1) {
         hero.moveTo(hero.getPosX() - 1, hero.getPosY());
       }
     } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
       hero.turn(Hero.Directions.RIGHT);
-      if (hero.getPosX() < map.intMap[0].length-1 && map.intMap[hero.getPosY()][hero.getPosX() + 1] == 1) {
+      if (hero.getPosX() < map.intMap[0].length - 1 && map.intMap[hero.getPosY()][hero.getPosX() + 1] == 1) {
         hero.moveTo(hero.getPosX() + 1, hero.getPosY());
       }
     }
@@ -103,4 +106,4 @@ public class Board extends JComponent implements KeyListener {
   }
 
 
-  }
+}

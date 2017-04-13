@@ -8,13 +8,13 @@ public class Tiles extends GameObject {
     this.posY = posY;
   }
 
-  public boolean isWall() {
+  /*public boolean isWall() {
     return this.costume.equals("img/wall.png");
   }
 
   public boolean isClear() {
     return this.costume.equals("img/floor.png");
-  }
+  }*/
 
 
 }
