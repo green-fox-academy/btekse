@@ -42,17 +42,13 @@ public class VariableMutation {
     int f2 = 345;
     // tell if f1 is bigger than f2 (print as a boolean)
 
-    if (f1 > f2) {
-      System.out.println(f1 > f1);
-    }
+    System.out.println(f1 > f2);
 
 
     int g1 = 350;
     int g2 = 200;
     // tell if the double of g2 is bigger than g1 (print as a boolean)
-    if ((2 * g2) > g2) {
-      System.out.println((2 * g2) > g2);
-    }
+    System.out.println((2 * g2) > g1);
 
 
     long h = 1357988018575474L;
