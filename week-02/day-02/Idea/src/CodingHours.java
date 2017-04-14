@@ -12,14 +12,15 @@ public class CodingHours {
     // Print the percentage of the coding hours in the semester if the average
     // work hours weekly is 52
 
-  int daily = 6;
-  int weeks = 17;
-  int weekly = 52;
+  int dailyCodingHours = 6;
+  int semesterWeeks = 17;
+  int workDays = 5;
+  double averageWorkHoursWeekly = 52.;
+  double hoursInWeek = (24*7.);
 
   double a = 30.0/52.0;
-  double b = a * 100;
 
-  System.out.println ("You coding: " + (daily * weeks) + " hours during the academy.");
-  System.out.println ("It means that you'll coding the " + ((52.0 / 168) *  100) + "% of your time during Green Fox.");
+  System.out.println ("You coding: " + (dailyCodingHours * workDays * semesterWeeks) + " hours during the academy.");
+  System.out.println ("It means that you'll coding the " + (averageWorkHoursWeekly / hoursInWeek) * 100 + "% of your time during Green Fox.");
   }
 }
