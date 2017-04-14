@@ -10,8 +10,8 @@ public class MileToKmConverter {
 
     System.out.println("Please enter the distance in km: ");
 
-    Scanner sc = new Scanner(System.in);
-    int km = sc.nextInt();
+    Scanner scanner = new Scanner(System.in);
+      int km = scanner.nextInt();
 
     System.out.println("Your distance in miles: " + km * kmToMiles);
   }
