@@ -13,19 +13,15 @@ public class Sum {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.println("Enter number: ");
-    int x = scanner.nextInt();
-    System.out.println(sum(x));
+    int scannedNumber = scanner.nextInt();
+    System.out.println("The sum number is: " + sum(scannedNumber));
   }
 
-  public static int sum (int arg) {
-
-    int summary = 0;
-    for (int i = 0; i < arg; i++) {
-      summary += i;
-    }
-
-    return summary;
-
+  private static int sum(int sumTill) {
+  int sum = 0;
+  for (int i = 0; i <= sumTill; i++) {
+    sum += i;
+  }
+  return sum;
   }
 }
-
