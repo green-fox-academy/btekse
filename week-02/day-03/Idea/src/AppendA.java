@@ -15,6 +15,7 @@ public class AppendA {
   }
 
   public static void appendA (String str) {
+
     System.out.println(str + "a");
   }
 }

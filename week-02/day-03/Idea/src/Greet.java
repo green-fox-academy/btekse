@@ -15,7 +15,7 @@ public class Greet {
         greet(al);
       }
 
-      public static void greet(String str) {
-        System.out.println("Greetings dear, " + str + "!");
+      public static void greet(String stringGreenfox) {
+        System.out.println("Greetings dear, " + stringGreenfox + "!");
       }
     }
