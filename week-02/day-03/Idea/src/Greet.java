@@ -11,11 +11,12 @@ public class Greet {
 //     - Greeting is printing e.g. `Greetings dear, Greenfox`
 // - Greet `al`
 
-        String al = "Greenfox";
-        greet(al);
-      }
 
-      public static void greet(String stringGreenfox) {
-        System.out.println("Greetings dear, " + stringGreenfox + "!");
-      }
-    }
+    String al = "Greenfox";
+    System.out.println(greet(al));
+  }
+
+  public static String greet(String string) {
+  return "Greetings dear, " + string +"!";
+  }
+}
