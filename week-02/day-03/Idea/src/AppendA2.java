@@ -1,13 +1,18 @@
-/**
- * Created by Balázs on 2017. 04. 06..
- */
-
-
 // - Create an array variable named `nimals`
 //   with the following content: `["kuty", "macs", "cic"]`
 // - Add all elements an `"a"` at the end
 
 public class AppendA2 {
+  public static void main(String[] args) {
+    String[] nimals = {"kuty", "macsk", "cic"};
+
+    for (String animals : nimals) {
+      System.out.println(animals + "a");
+    }
+  }
+}
+
+/*public class AppendA2 {
   public static void main(String[] args) {
     String[] nimals = {"kuty", "macsk", "cic"};
 
@@ -17,3 +22,4 @@ public class AppendA2 {
     }
   }
 }
+*/
