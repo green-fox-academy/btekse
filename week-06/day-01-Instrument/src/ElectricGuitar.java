@@ -1,6 +1,6 @@
 package main.java.music;
 
-public class ElectricGuitar extends StringedInstrument {
+public class ElectricGuitar extends main.java.music.StringedInstrument {
   public ElectricGuitar(int numberOfStrings) {
     super("Electric Guitar", "Twang", numberOfStrings);
   }

@@ -6,7 +6,7 @@ public class AppMusic {
   public static void main(String[] args) {
 
     System.out.println("Test 1, create Electric Guitar, Bass Guitar and Violin with default strings.");
-    ElectricGuitar guitar = new ElectricGuitar();
+    ElectricGuitar ElectricGuitar = new ElectricGuitar();
     BassGuitar bassGuitar = new BassGuitar();
     Violin violin = new Violin();
 
