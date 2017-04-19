@@ -1,6 +1,6 @@
-package main.java.music;
+//package main.java.music;
 
-public class BassGuitar extends main.java.music.StringedInstrument {
+public class BassGuitar extends StringedInstrument {
   public BassGuitar(int numberOfStrings) {
     super("bass guitar", "Duum-duum-duum", numberOfStrings);
   }
@@ -11,6 +11,6 @@ public class BassGuitar extends main.java.music.StringedInstrument {
 
   @Override
   public void play() {
-    System.out.println(formatForPlay, name, numerOfStrings, sound);
+    System.out.printf(formatForPlay, name, numberOfStrings, sound);
   }
 }

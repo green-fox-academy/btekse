@@ -1,5 +1,3 @@
-import main.java.music.*;
-
 public class AppMusic {
 
 
@@ -11,7 +9,7 @@ public class AppMusic {
     Violin violin = new Violin();
 
     System.out.println("Test 1 Play");
-    guitar.play();
+    ElectricGuitar.play();
     bassGuitar.play();
     violin.play();
 
@@ -20,8 +18,8 @@ public class AppMusic {
     BassGuitar bassGuitar2 = new BassGuitar(5);
 
     System.out.println("Test 2 Play");
-    guitar.play();
-    bassGuitar.play();
+    guitar2.play();
+    bassGuitar2.play();
   }
 
 }

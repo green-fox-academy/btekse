@@ -1,6 +1,6 @@
-package main.java.music;
+//package main.java.music;
 
-public abstract class StringedInstrument extends main.java.music.Instrument {
+public abstract class StringedInstrument extends Instrument {
   int numberOfStrings;
   final String formatForPlay ="%s, a %d-stringed instrument that %s\n";
 

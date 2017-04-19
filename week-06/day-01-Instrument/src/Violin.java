@@ -1,6 +1,6 @@
-package main.java.music;
+//package main.java.music;
 
-public class Violin extends main.java.music.StringedInstrument {
+public class Violin extends StringedInstrument {
   public Violin(int numberOfStrings) {
     super("Violin", "Screech", numberOfStrings);
   }
@@ -11,7 +11,6 @@ public class Violin extends main.java.music.StringedInstrument {
 
   @Override
   public void play() {
-    System.out.println(formatForPlay, name, numerOfStrings, sound);
+    System.out.printf(formatForPlay, name, numberOfStrings, sound);
   }
-}
 }

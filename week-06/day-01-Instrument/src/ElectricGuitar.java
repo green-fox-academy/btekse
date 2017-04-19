@@ -1,6 +1,6 @@
-package main.java.music;
+//package main.java.music;
 
-public class ElectricGuitar extends main.java.music.StringedInstrument {
+public class ElectricGuitar extends StringedInstrument {
   public ElectricGuitar(int numberOfStrings) {
     super("Electric Guitar", "Twang", numberOfStrings);
   }
@@ -11,6 +11,6 @@ public class ElectricGuitar extends main.java.music.StringedInstrument {
 
   @Override
   public void play() {
-    System.out.println(formatForPlay, name, numerOfStrings, sound);
+    System.out.printf(formatForPlay, name, numberOfStrings, sound);
   }
 }

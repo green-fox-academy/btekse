@@ -1,4 +1,4 @@
-package main.java.music;
+//package main.java.music;
 
 public abstract class Instrument {
   String name;
