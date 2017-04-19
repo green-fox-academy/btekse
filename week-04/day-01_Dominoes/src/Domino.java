@@ -1,6 +1,3 @@
-/**
- * Created by Balázs on 2017. 04. 03..
- */
 import java.util.Arrays;
 
 public class Domino {
