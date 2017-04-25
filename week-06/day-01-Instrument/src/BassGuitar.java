@@ -2,6 +2,7 @@
 
 public class BassGuitar extends StringedInstrument {
   public BassGuitar(int numberOfStrings) {
+
     super("bass guitar", "Duum-duum-duum", numberOfStrings);
   }
 
@@ -11,6 +12,7 @@ public class BassGuitar extends StringedInstrument {
 
   @Override
   public void play() {
+
     System.out.printf(formatForPlay, name, numberOfStrings, sound);
   }
 }
