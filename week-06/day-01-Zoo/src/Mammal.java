@@ -1,15 +1,10 @@
-public class Mammal extends Animal {
+class Mammal extends Animal {
 
-  public Mammal(String name, int age, String gender, int legsNumber, int weightInKg) {
-    super(name, age, gender, legsNumber, weightInKg)
+  Mammal(String name) {
+    super(name);
   }
 
   String wantChild() {
-    return "want child of course...";
-  }
-
-  @Override
-  public void eat() {
-    System.out.println("eating...");
+    return "wants a child from somebody!";
   }
 }

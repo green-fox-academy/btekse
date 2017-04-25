@@ -1,15 +1,10 @@
-public class Bird extends Animal {
-  public Bird (String name, int age, String gender, int legsNumber, int weightInKg) {
-    super(name, age, gender, legsNumber, weightInKg);
+class Bird extends Animal {
+
+  Bird(String name) {
+    super(name);
   }
 
-  @Override
-  public String wantChild() {
-    return "want child from an egg";
-  }
-
-  @Override
-  public void move() {
-    System.out.println("with wings");
+  String wantChild() {
+    return "wants a child from an egg!";
   }
 }

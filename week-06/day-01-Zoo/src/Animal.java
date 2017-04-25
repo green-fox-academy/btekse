@@ -1,26 +1,28 @@
-public abstract class Animal {
+abstract class Animal {
+  private String name;
+  private int age;
+  private String gender;
+  private boolean hasLegs;
 
-  String name;
-  int age;
-  String gender;
-  int legsNumber;
-  int weightInKg;
-
-  public Animal(String name, int age, String gender, int legsNumber, int weightInKg){
+  Animal(String name) {
     this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.legsNumber = legsNumber;
-    this.weightInKg = weightInKg;
   }
 
-  void greet() {
-    System.out.println("Hi...");
+  /*void greet() {
+    System.out.println("Hello");
+  }*/
+
+  abstract String wantChild();
+
+  /*void eat() {
+    System.out.println("Eating...");
+  }*/
+
+  void setName(String name) {
+    this.name = name;
   }
 
-  public abstract String wantChild();
-
-  void eat() {
-    System.out.println("eating...");
+  String getName() {
+    return name;
   }
 }

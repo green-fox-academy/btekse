@@ -1,14 +1,10 @@
-public class Reptile extends Animal {
-  public Reptile (String name, int age, String gender, int legsNumber, int weightInKg) {
+class Reptile extends Animal {
 
-    Reptile String name {
-      setName(name);
-    }
-
-    String wantChild() {
-      return "want child from an egg";
-    }
-
+  Reptile(String name) {
+    super(name);
   }
 
+  String wantChild() {
+    return "wants a child from an egg!";
+  }
 }
