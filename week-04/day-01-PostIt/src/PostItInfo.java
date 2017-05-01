@@ -1,6 +1,3 @@
-/**
- * Created by Balázs on 2017. 04. 19..
- */
 public class PostItInfo {
   public static void main(String[] args) {
     PostIt postIt1 = new PostIt("orange", "Idea1", "blue");

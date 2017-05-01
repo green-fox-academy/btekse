@@ -1,6 +1,3 @@
-/**
- * Created by Balázs on 2017. 04. 19..
- */
 public class PostIt {
   public String backgroundColor;
   public String text;
