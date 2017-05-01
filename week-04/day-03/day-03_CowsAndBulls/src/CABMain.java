@@ -1,6 +1,7 @@
 public class CABMain {
+  public static void main(String[] args) {
 
-  static void play() {
-
+    CowsAndBulls random = new CowsAndBulls(4);
+    CowsAndBulls game = new CowsAndBulls();
   }
 }
