@@ -11,7 +11,7 @@ public class exercise3 {
 
   @RequestMapping("/exercise3")
   public String getFirstEndPoint(Model model) {
-    BankAccount bankAccount = new BankAccount("Simba", 2000, "lion");
+    BankAccount bankAccount = new BankAccount("Simba", 2000, "lion", true);
     model.addAttribute("name", bankAccount.getName());
     model.addAttribute("balance", bankAccount.getBalance());
     model.addAttribute("animalType", bankAccount.getAnimalType());

@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class exercise5 {
+public class exercise7 {
 
-  @RequestMapping("/exercise5")
+  @RequestMapping("/exercise7")
   public String getFifthEndPoint(Model model) {
     List<BankAccount> bankAccountList = new ArrayList<>();
     bankAccountList.add(new BankAccount("Simba", 100, "lion", true));
@@ -24,6 +24,6 @@ public class exercise5 {
     bankAccountList.add(new BankAccount("Scar", 100, "lion", false));
 
     model.addAttribute("bankAccountList", bankAccountList);
-    return "exercise5";
+    return "exercise7";
   }
 }
