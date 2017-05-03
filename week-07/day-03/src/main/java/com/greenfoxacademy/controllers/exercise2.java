@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-public class Exercise1 {
+public class exercise2 {
 
-  @RequestMapping("/exercise1")
+  @RequestMapping("/exercise2")
   public String getFirstEndPoint(Model model) {
     BankAccount bankAccount = new BankAccount("Simba", 2000, "lion");
     model.addAttribute("name", bankAccount.getName());
     model.addAttribute("balance", bankAccount.getBalance());
     model.addAttribute("animalType", bankAccount.getAnimalType());
-    return "exercise1";
+    return "exercise2";
   }
 }
