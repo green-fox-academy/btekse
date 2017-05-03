@@ -6,6 +6,6 @@
     <meta charset="utf-8" />
 </head>
 <body>
-<p th:each="bankAccount : ${bankAccountList}" th:text="'Name: ' + ${bankAccount.name} + '; Balance: ' + ${bankAccount.balance} + '; Animal Type: ' + ${bankAccount.animalType}"></p>
+<p th:each="bankAccount : ${bankAccountList}" th:text="'Nr.: ' + ${bankAccountStat.index} + 'Name: ' + ${bankAccount.name} + '; Balance: ' + ${bankAccount.balance} + '; Animal Type: ' + ${bankAccount.animalType}"></p>
 </body>
 </html>
