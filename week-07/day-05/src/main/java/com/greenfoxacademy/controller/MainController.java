@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -19,6 +20,11 @@ public class MainController {
     fox.setDrink("water");
     model.addAttribute("fox", fox);
     return "index";
+  }
+
+  @RequestMapping("/nutritionStore")
+  public String nutritionStore(Model model) {
+    return "nutritionStore";
   }
 
 }
