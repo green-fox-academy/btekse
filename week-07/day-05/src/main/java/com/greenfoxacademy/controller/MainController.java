@@ -14,9 +14,10 @@ public class MainController {
 
   @RequestMapping("/")
   public String index(Model model) {
-    fox.setName("a");
-    fox.setFood("b");
-    fox.setDrink("c");
+    fox.setName("Mr. Green");
+    fox.setFood("salad");
+    fox.setDrink("water");
+    model.addAttribute("fox", fox);
     return "index";
   }
 

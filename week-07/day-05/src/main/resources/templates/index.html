@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8"/>
+    <title>Fox</title>
 </head>
 <body>
-<ul>
-    <li>
-        <a href="">Information</a>
-    </li>
-</ul>
-<img src="../static/greenfox.png" alt="greenfoxlogo">
-
+    <ul>
+        <li>
+            <a href="">Information</a>
+        </li>
+    </ul>
+<img src="greenfox.png" alt="greenfoxlogo"/>
+<p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink} + '. He knows xxx trick(s).'"/>
 
 </body>
 </html>
