@@ -11,7 +11,8 @@
         </li>
     </ul>
 <img src="greenfox.png" alt="greenfoxlogo"/>
-<p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink} + '. He knows xxx trick(s).'"/>
+
+    <p th:text="'This is ' + ${fox.name} + '. Currently living on ' + ${fox.food} + ' and ' + ${fox.drink} + '. He knows ' + ${fox.getTricks().size()} + ' trick(s).'"/>
 
 </body>
 </html>
