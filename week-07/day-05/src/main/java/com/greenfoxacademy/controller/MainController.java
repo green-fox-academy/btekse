@@ -18,7 +18,7 @@ public class MainController {
     fox.setName("Mr. Green");
     fox.setFood("salad");
     fox.setDrink("water");
-    model.addAttribute("fox", fox);
+    //model.addAttribute("fox", fox);
     return "index";
   }
 
