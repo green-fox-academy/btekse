@@ -1,5 +1,7 @@
 package com.greenfoxacademy.controller;
 
+import com.greenfoxacademy.Fox;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,9 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MainController {
 
-  /*@RequestMapping("/")
-  public String fox(Model model) {
-    return "fox";
-  }*/
+  @Autowired
+  Fox fox;
+
+  @RequestMapping("/")
+  public String index(Model model) {
+    fox.setName("a");
+    fox.setFood("b");
+    fox.setDrink("c");
+    return "index";
+  }
 
 }
