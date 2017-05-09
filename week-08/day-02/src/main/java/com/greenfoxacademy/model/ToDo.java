@@ -21,11 +21,12 @@ public class ToDo {
   public ToDo () {
   }
 
-  public ToDo(String string) { //????????
+  public ToDo(String title) {
     this.title = title;
-    isUrgent = false;
-    isDone = false;
-
   }
 
+  @Override
+  public String toString() {
+    return id + ": " + title;
+  }
 }
