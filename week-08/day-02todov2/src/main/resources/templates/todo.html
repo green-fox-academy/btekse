@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ToDo Main</title>
+</head>
+<body>
+    <h1>TODOS FOR TODAY:</h1>
+    <ul>
+        <li th:each="todoline : ${text}" th:text="${todoline}">Todo</li>
+    </ul>
+    <form th:action="@{/addTodo}" method="post">
+        <input type="text" th:name="title"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
