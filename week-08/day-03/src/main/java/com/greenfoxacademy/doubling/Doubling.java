@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class Doubling {
   int received;
   int result;
@@ -18,10 +18,10 @@ public class Doubling {
   }
 
   public int getReceived(){
-    return result;
+    return received;
   }
 
   public int getResult(){
-    return received;
+    return result;
   }
 }
