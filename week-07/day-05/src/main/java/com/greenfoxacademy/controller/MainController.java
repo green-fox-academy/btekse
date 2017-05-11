@@ -35,15 +35,15 @@ public class MainController {
     return "redirect:/";
   }
 
-  @RequestMapping("/trick_center")
+  @RequestMapping("/trickCenter")
   public String trickCenter(Model model) {
     model.addAttribute("fox", fox);
-    return "trick_center";
+    return "trickCenter";
   }
 
-  /*@RequestMapping("/addtrick")
+  @RequestMapping("/addtrick")
   public String addTrick(@RequestParam("tricks") String tricks) throws Exception {
-    fox.addTrick(tricks);
+    fox.getTricks();
     return "redirect:/";
-  }*/
+  }
 }

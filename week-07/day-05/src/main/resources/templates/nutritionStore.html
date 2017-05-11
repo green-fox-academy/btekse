@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Fox</title>
+    <title>Nutrition Store</title>
 </head>
 <body>
 <ul>
@@ -10,12 +10,11 @@
         <a href="">Information</a>
     </li>
     <li>
-        <a href="/nutritionStore">Nutrition Store</a>
+        <a href="/trickCenter">Trick Center</a>
     </li>
 </ul>
 <img src="greenfox.png" alt="greenfoxlogo"/>
 
-<p th:text="'So ' + ${fox.getName()} +  ' is currently living on ' + ${fox.getFood()} + ' and ' + ${fox.getDrink()} + '. But you can give him other food and drink below.'">This is Mr. Green. Currently living on salad and water. He knows 0 trick.</p>
 <form method="post" action="/changefood">
     <label>
         Food

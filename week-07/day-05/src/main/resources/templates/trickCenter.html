@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Trick Center</title>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="">Information</a>
+    </li>
+    <li>
+        <a href="/nutritionStore">Nutrition Store</a>
+    </li>
+</ul>
+<img src="greenfox.png" alt="greenfoxlogo"/>
+
+<form method="post" action="/addtrick">
+    <label>
+        Add trick
+        <select name="tricks">
+            <option value="run" th:selected="run">run</option>
+            <option value="sit">sit</option>
+            <option value="scream">scream</option>
+            <option value="read">read</option>
+        </select>
+    </label>
+    <input type="submit" value="Add Trick"/>
+</form>
+</body>
+</html>
