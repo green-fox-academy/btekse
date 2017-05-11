@@ -15,16 +15,35 @@ public class MainController {
 
   @RequestMapping("/")
   public String index(Model model) {
-    fox.setName("Mr. Green");
-    fox.setFood("salad");
-    fox.setDrink("water");
-    //model.addAttribute("fox", fox);
+    //fox.setName("Mr. Green");
+    //fox.setFood("salad");
+    //fox.setDrink("water");
+    model.addAttribute("fox", fox);
     return "index";
   }
 
   @RequestMapping("/nutritionStore")
   public String nutritionStore(Model model) {
+    model.addAttribute("fox", fox);
     return "nutritionStore";
   }
 
+  @RequestMapping("/changefood")
+  public String changeFood(@RequestParam("food") String food, @RequestParam("drink") String drink) throws Exception {
+    fox.setFood(food);
+    fox.setDrink(drink);
+    return "redirect:/";
+  }
+
+  @RequestMapping("/trick_center")
+  public String trickCenter(Model model) {
+    model.addAttribute("fox", fox);
+    return "trick_center";
+  }
+
+  /*@RequestMapping("/addtrick")
+  public String addTrick(@RequestParam("tricks") String tricks) throws Exception {
+    fox.addTrick(tricks);
+    return "redirect:/";
+  }*/
 }
