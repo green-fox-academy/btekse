@@ -10,7 +10,7 @@ import java.util.List;
 
 @Component
 public class Fox {
-  private String name;
+  private String name = "Mr. Fox";
   private String food;
   private String drink;
   private List<String> tricks = new ArrayList<>();
