@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8" />
+  <title>Notes</title>
+</head>
+<body>
+<h2>Update the note</h2>
+
+<form th:action="@{/changeText/} + ${currentId} " th:object="${notes}" method="post">
+  <input type="text" th:name="newText"  />
+  <input type="submit" value="Update it!" />
+</form>
+</body>
+</html>
