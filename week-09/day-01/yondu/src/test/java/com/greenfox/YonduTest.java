@@ -40,9 +40,9 @@ public class YonduTest {
   public void statusOkYondu() throws Exception {
     mockMvc.perform(get("/yondu?distance=100.0&time=10.0"))
       .andExpect(status().isOk())
-      .andExpect(jsonPath("$.distance", is(100.0)))
-      .andExpect(jsonPath("$.time", is(10.0)))
-      .andExpect(jsonPath("$.speen", is(10.0)));
+      .andExpect(MockMvcResultMatches.jsonPath("$.distance").value(100.0))
+      .andExpect(MockMvcResultMatches.jsonPath("$.time").value(10.0))
+      .andExpect(MockMvcResultMatches.jsonPath("$.speen", is(10.0)));
   }
 
   @Test
