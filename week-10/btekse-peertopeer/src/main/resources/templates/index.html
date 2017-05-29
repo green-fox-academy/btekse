@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Peer To Peer - The App Page</title>
+  <link rel="stylesheet" th:href="@{/style.css}"/>
+  <meta charset="utf-8"/>
+</head>
+<body>
+<h1>Peer to Peer Chat program</h1>
+
+<form action="/update" method="get">
+  <p>
+    Your username: <input type="text" name="name" th:placeholder="${user}"/>
+    <input type="submit" value="Update"/>
+  </p>
+</form>
+
+<span th:if="${messagereposize == 0}">No messages yet.</span>
+<span th:if="${messagereposize > 0}">
+
+<ul>
+  <li th:each="message : ${messages}"
+      th:utext="${message.username} + '&lt;br/&gt;' + ${message.text}"></li>
+
+</ul>
+</span>
+
+
+<form action="/message">
+  <p th:text="${texterror}"></p>
+  <p>
+    <textarea type="text" name="message" style="width: 200px; height: 50px;" placeholder="Enter message"/>
+    <input type="submit" value="Send"/>
+  </p>
+  <p>
+    <input type="button" value="Refresh Page" onClick="window.location.href=window.location.href"/>
+  </p>
+</form>
+
+</body>
+</html>

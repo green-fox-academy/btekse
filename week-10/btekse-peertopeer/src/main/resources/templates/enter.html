@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Peer To Peer - Register Page</title>
+  <link rel="stylesheet" th:href="@{/style.css}"/>
+  <meta charset="utf-8"/>
+</head>
+<body>
+<h1>Enter</h1>
+<p th:text="${error}"></p>
+<form th:action="@{/addUser}" method="post">
+  <p>
+    Choose your name: <input type="text" th:name="name"/>
+    <input type="submit" value="Enter"/>
+  </p>
+</form>
+
+</body>
+</html>
