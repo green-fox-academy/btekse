@@ -27,7 +27,7 @@ public class NoteController {
   @RequestMapping("/addNote")
   public String addNote(Model model,
                         @RequestParam(name = "description", required = false) String text) {
-    if (!text.equals("")) {
+    if (!text.equals(""))
       noteRepo.save(new Note(text));
       model.addAttribute("notes", noteRepo.findAll());
     }

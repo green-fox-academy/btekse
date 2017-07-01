@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.stream.IntStream;
 
 /**
  * Created by Balázs on 2017. 03. 28..
@@ -9,6 +10,8 @@ import java.util.Arrays;
 public class PrintAll {
   public static void main(String[] args) {
     int[] af = {4, 5, 6, 7};
+    int sum = IntStream.of(af).sum();
     System.out.println(Arrays.toString(af));
+    System.out.println("Sum of the arraay: " + sum);;
   }
 }

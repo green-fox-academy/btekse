@@ -3,20 +3,18 @@ package com.greenfox.model;
 import jdk.nashorn.internal.objects.annotations.Setter;
 import lombok.Getter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "Meals")
 @Setter
 @Getter
 public class Meal {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private long id;
+  private Long id;
   private LocalDate date;
   private String type;
   private String description;

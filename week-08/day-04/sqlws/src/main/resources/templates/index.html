@@ -13,10 +13,10 @@
             <td th:text="${entry.text}"/>
             <td th:text="${entry.date}"/>
             <td><form th:action="@{/deleteNote/} + ${entry.Id}" th:object="${notes}" method="post">
-                <input type="submit" value="Delete post" />
+                <input type="submit" value="Delete post" style="color:black; background-color:orangered"/>
             </form></td>
             <td><form th:action="@{/updateNote/} + ${entry.Id}" th:object="${notes}" method="post">
-                <input type="submit" value="Update Note" />
+                <input type="submit" value="Update Note" style="color:black; background-color:greenyellow"/>
             </form></td>
         </tr>
     </ul>
