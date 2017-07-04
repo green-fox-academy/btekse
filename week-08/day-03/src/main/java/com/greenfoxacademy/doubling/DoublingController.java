@@ -13,7 +13,7 @@ public class DoublingController {
 
 
   @RequestMapping("/doubling")
-  public Doubling doubling(@RequestParam(value = "input", required = true) int input) {
+  public Doubling doubling(@RequestParam(value = "input"/*, required = true*/) int input) {
   Doubling doubling = new Doubling(input);
     return doubling;
   }
