@@ -44,6 +44,13 @@ public class GrootTest {
   }
 
   @Test
+  public void statusIsOKGrootWithNumber() throws Exception {
+    mockMvc.perform(get("/groot?message=123"))
+      .andExpect(status().isOk())
+      .andExpect(jsonPath("$.received").value("123"));
+  }
+
+  @Test
   public void statusIsNotOkGroot() throws Exception {
     mockMvc.perform(get("/groot"))
       .andExpect(status().isOk())

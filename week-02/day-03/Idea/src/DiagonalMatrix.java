@@ -23,9 +23,9 @@ public class DiagonalMatrix {
     for (int i = 0; i < matrixheight; i++) {
       for (int j = 0; j < matrixheight; j++) {
         if (i == j) {
-          matrix[i][j] = 0;
-        }else{
           matrix[i][j] = 1;
+        }else{
+          matrix[i][j] = 0;
         }
 
         }

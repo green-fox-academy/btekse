@@ -14,7 +14,7 @@ public class ArrayMixes {
   static int[] mixedArray(int[] list1, int[] list2) {
     int[] arrayResult = new int[list1.length + list2.length];
     int i;
-    for ( i = 0; i < (Math.min(list1.length, list2.length)); i++) {
+    for (i = 0; i < (Math.min(list1.length, list2.length)); i++) {
       arrayResult[i * 2] = list1[i];
       arrayResult[2 * i + 1] = list2[i];
     }
@@ -22,14 +22,14 @@ public class ArrayMixes {
     if (list1.length > list2.length) {
       biggerList = list1;
     } else {
-        biggerList = list2;
+      biggerList = list2;
     }
 
     //int[] biggerList = list1.length > list2.length ? list1 : list2;
 
 
-      for (int j = i; j < biggerList.length; j++) {
-      arrayResult[j+i] = biggerList[j];
+    for (int j = i; j < biggerList.length; j++) {
+      arrayResult[j + i] = biggerList[j];
     }
     return arrayResult;
   }
