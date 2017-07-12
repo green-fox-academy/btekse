@@ -49,7 +49,7 @@ public class HearthbeatEndpointTest {
 
   @Test
   public void testRepositoryEmptyTable() throws Exception {
-    heartBeatRepository.deleteAll();
+    //heartBeatRepository.deleteAll();
     mockMvc.perform(get("/heartbeat"))
       .andExpect(status().isOk()) //200 httpstatus (ok)
       .andExpect(content().contentType(contentType)) //JSON object-tel való teszteléshez
