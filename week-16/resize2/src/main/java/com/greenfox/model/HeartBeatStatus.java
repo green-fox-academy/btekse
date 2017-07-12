@@ -11,9 +11,9 @@ public class HeartBeatStatus {
     this.status = "ok";
   }
 
-  public HeartBeatStatus(String df) {
+  public HeartBeatStatus(String database) {
     this.status = "ok";
-    this.database = df;
+    this.database = database;
   }
 
   public String getDatabase() {

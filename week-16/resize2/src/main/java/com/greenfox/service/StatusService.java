@@ -10,15 +10,15 @@ import org.springframework.stereotype.Service;
 public class StatusService {
 
   private final HeartBeatRepository heartBeatRepository;
+  private HeartBeatStatus heartBeatStatus;
 
   @Autowired
-  public StatusService(HeartBeatRepository heartBeatRepository) {
+  public StatusService(HeartBeatRepository heartBeatRepository, HeartBeatStatus heartBeatStatus) {
     this.heartBeatRepository = heartBeatRepository;
+    this.heartBeatStatus = heartBeatStatus;
   }
 
   public HeartBeatStatus returnStatusBasedOnRepository() {
-
-    HeartBeatStatus heartBeatStatus = new HeartBeatStatus();
     if (heartBeatRepository.count() == 0) {
       heartBeatStatus.setDatabase("error");
     } else {
