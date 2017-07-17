@@ -28,10 +28,6 @@ public class ThumbnailLinks {
     return Id;
   }
 
-  public void setId(long id) {
-    Id = id;
-  }
-
   public String getSelf() {
     return self;
   }

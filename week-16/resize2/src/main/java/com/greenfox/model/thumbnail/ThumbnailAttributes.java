@@ -1,12 +1,12 @@
 package com.greenfox.model.thumbnail;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 @Entity
 public class ThumbnailAttributes {
@@ -17,18 +17,18 @@ public class ThumbnailAttributes {
   long Id;
   boolean is_main;
   boolean uploaded;
-  String created_at;
+  Timestamp created_at;
   String content_url;
 
   public ThumbnailAttributes() {
   }
 
-  public long getId() {
-    return Id;
+  public ThumbnailAttributes(boolean is_main) {
+    this.is_main = is_main;
   }
 
-  public void setId(long id) {
-    Id = id;
+  public long getId() {
+    return Id;
   }
 
   public boolean isIs_main() {
@@ -47,11 +47,11 @@ public class ThumbnailAttributes {
     this.uploaded = uploaded;
   }
 
-  public String getCreated_at() {
+  public Timestamp getCreated_at() {
     return created_at;
   }
 
-  public void setCreated_at(String created_at) {
+  public void setCreated_at(Timestamp created_at) {
     this.created_at = created_at;
   }
 

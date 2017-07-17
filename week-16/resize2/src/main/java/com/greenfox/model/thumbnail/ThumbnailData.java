@@ -15,12 +15,10 @@ public class ThumbnailData {
   ThumbnailAttributes attributes;
 
   public ThumbnailData(ThumbnailAttributes attributes) {
-    this.type = "thumbnails";
     this.attributes = attributes;
   }
 
   public ThumbnailData() {
-    this.type = "thumbnails";
   }
 
   public String getType() {
@@ -33,10 +31,6 @@ public class ThumbnailData {
 
   public long getId() {
     return Id;
-  }
-
-  public void setId(long id) {
-    Id = id;
   }
 
   public ThumbnailAttributes getAttributes() {

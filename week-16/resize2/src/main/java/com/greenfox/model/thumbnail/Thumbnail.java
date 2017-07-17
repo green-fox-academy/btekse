@@ -30,10 +30,6 @@ public class Thumbnail {
     return Id;
   }
 
-  public void setId(long id) {
-    Id = id;
-  }
-
   public ThumbnailLinks getLinks() {
     return links;
   }
