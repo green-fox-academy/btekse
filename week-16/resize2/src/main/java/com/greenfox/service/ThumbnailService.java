@@ -32,26 +32,28 @@ public class ThumbnailService {
   }
 
   public ThumbnailAttributes setThumbnailAttributesFields(ThumbnailData thumbnailData) {
-    ThumbnailAttributes thumbnailAttributes = new ThumbnailAttributes();
-    thumbnailAttributesRepository.save(thumbnailAttributes);
+//    ThumbnailAttributes thumbnailAttributes = new ThumbnailAttributes();
+//    thumbnailAttributes.setIs_main(thumbnailData.getAttributes().isIs_main());
+    ThumbnailAttributes thumbnailAttributes = thumbnailData.getAttributes();
+//    thumbnailAttributesRepository.save(thumbnailAttributes);
 //    thumbnailAttributes.setIs_main(true);
     System.out.println("---------------------------------------------------------");
     System.out.println(thumbnailData.getAttributes());
     System.out.println("---------------------------------------------------------");
 //    thumbnailAttributes.setIs_main(thumbnailData.getAttributes().isIs_main());
-    thumbnailAttributes.setUploaded(false);
-    Timestamp ts = Timestamp.valueOf(LocalDateTime.now());
-    thumbnailAttributes.setCreated_at(ts);
-    thumbnailAttributes.setContent_url("https://your-hostname.com/media/images/" + thumbnailAttributes.getId() + "/content");
+//    thumbnailAttributes.setUploaded(false);
+//    Timestamp ts = Timestamp.valueOf(LocalDateTime.now());
+//    thumbnailAttributes.setCreated_at(ts);
+//    thumbnailAttributes.setContent_url("https://your-hostname.com/media/images/" + thumbnailAttributes.getId() + "/content");
     thumbnailAttributesRepository.save(thumbnailAttributes);
     return thumbnailAttributes;
   }
 
   public ThumbnailData setThumbnailData(ThumbnailData thumbnailData) {
-    ThumbnailData newThumbnailData = new ThumbnailData();
-    thumbnailDataRepository.save(newThumbnailData);
-    newThumbnailData.setType(thumbnailData.getType());
-    newThumbnailData.setAttributes(setThumbnailAttributesFields(thumbnailData));
+//    ThumbnailData newThumbnailData = new ThumbnailData();
+//    thumbnailDataRepository.save(newThumbnailData);
+    thumbnailData.setType(thumbnailData.getType());
+    thumbnailData.setAttributes(setThumbnailAttributesFields(thumbnailData));
     thumbnailDataRepository.save(newThumbnailData);
     return newThumbnailData;
   }
@@ -67,7 +69,7 @@ public class ThumbnailService {
 
   public Thumbnail setThumbnail(long id, ThumbnailData thumbnailData) {
     Thumbnail thumbnail = new Thumbnail();
-    System.out.println("**********************************************************************************************");
+      System.out.println("**********************************************************************************************");
     System.out.println(thumbnailData.getAttributes());
     System.out.println("**********************************************************************************************");
     thumbnailRepository.save(thumbnail);

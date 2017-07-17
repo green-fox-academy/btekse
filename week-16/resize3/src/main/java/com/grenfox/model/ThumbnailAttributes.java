@@ -2,6 +2,7 @@ package com.grenfox.model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "thumbnails")
@@ -17,6 +18,11 @@ public class ThumbnailAttributes {
   private String contentUrl;
 
   public ThumbnailAttributes() {
+  }
+
+  public ThumbnailAttributes(long hotel, boolean is_main) {
+    this.hotel = hotel;
+    this.is_main = is_main;
   }
 
   public long getId() {

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ThumbnailAttributesRepository extends CrudRepository<ThumbnailAttributes, Long> {
+  public ThumbnailAttributes findFirstByOrderByIdDesc();
 }

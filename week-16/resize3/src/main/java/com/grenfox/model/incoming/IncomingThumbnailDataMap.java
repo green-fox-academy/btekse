@@ -1,4 +1,4 @@
-package com.grenfox.model;
+package com.grenfox.model.incoming;
 
 public class IncomingThumbnailDataMap {
   IncomingThumbnailDataData data;

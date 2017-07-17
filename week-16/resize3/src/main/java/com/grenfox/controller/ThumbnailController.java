@@ -1,7 +1,8 @@
 package com.grenfox.controller;
 
-import com.grenfox.model.IncomingThumbnailDataMap;
+import com.grenfox.model.incoming.IncomingThumbnailDataMap;
 import com.grenfox.model.ThumbnailAttributes;
+import com.grenfox.model.response.ResponseThumbnail;
 import com.grenfox.service.ThumbnailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ public class ThumbnailController {
   ThumbnailService thumbnailService;
 
   @PostMapping("/hotels/{id}/thumbnails")
-  public ThumbnailAttributes thumbnailAttributes(@PathVariable(name = "id") Long id, @RequestBody IncomingThumbnailDataMap incomingThumbnailDataMap) {
-    return thumbnailService.setThumbnailAttributesFields(incomingThumbnailDataMap.getData().getAttributes().getIs_main(), id)
+  public ResponseThumbnail thumbnailAttributes(@PathVariable(name = "id") Long id, @RequestBody IncomingThumbnailDataMap incomingThumbnailDataMap) {
+    return thumbnailService.createResponse(incomingThumbnailDataMap.getData().getAttributes().isIs_main(), id);
+  }
 }

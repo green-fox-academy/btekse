@@ -21,10 +21,10 @@ public class ThumbnailAttributes {
   String content_url;
 
   public ThumbnailAttributes() {
-  }
-
-  public ThumbnailAttributes(boolean is_main) {
     this.is_main = is_main;
+    this.uploaded = false;
+    this.created_at = new Timestamp(System.currentTimeMillis());
+    this.content_url = "testURL";
   }
 
   public long getId() {
