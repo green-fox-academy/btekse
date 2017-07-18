@@ -26,6 +26,7 @@ public class ThumbnailService {
   public ResponseThumbnail createResponse(boolean isMain, long hotelId) {
     ResponseThumbnail responseThumbnail = new ResponseThumbnail();
     thumbnailAttributesRepository.save(new ThumbnailAttributes(hotelId, isMain));
+
     ThumbnailAttributes thumbnailAttribute = thumbnailAttributesRepository.findFirstByOrderByIdDesc();
     thumbnailAttribute.setContentUrl("https://your-hostname.com/media/images/" + thumbnailAttribute.getId() + "/content");
     thumbnailAttribute.setUploaded(false);
