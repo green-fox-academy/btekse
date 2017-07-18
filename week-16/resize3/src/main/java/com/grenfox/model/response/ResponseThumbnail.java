@@ -1,10 +1,10 @@
 package com.grenfox.model.response;
 
-public class ResponseThumbnail {
+public class ResponseThumbnail<T> {
   ResponseThumbnailLinksMap links;
-  ResponseThumbnailDataMap data;
+  T data;
 
-  public ResponseThumbnail(ResponseThumbnailLinksMap links, ResponseThumbnailDataMap data) {
+  public ResponseThumbnail(ResponseThumbnailLinksMap links, T data) {
     this.links = links;
     this.data = data;
   }
@@ -20,11 +20,11 @@ public class ResponseThumbnail {
     this.links = links;
   }
 
-  public ResponseThumbnailDataMap getData() {
+  public T getData() {
     return data;
   }
 
-  public void setData(ResponseThumbnailDataMap data) {
+  public void setData(T data) {
     this.data = data;
   }
 }

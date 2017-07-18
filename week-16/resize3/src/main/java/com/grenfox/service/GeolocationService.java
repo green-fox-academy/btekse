@@ -9,6 +9,9 @@ import com.grenfox.repository.GeolocationAttributesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class GeolocationService {
   GeolocationAttributesRepository geolocationAttributesRepository;
@@ -21,23 +24,26 @@ public class GeolocationService {
   public ResponseThumbnail createGeolocationResponse() {
     ResponseThumbnail responseThumbnail = new ResponseThumbnail();
 
-    GeolocationAttributes geolocationAttributes = geolocationAttributesRepository.findOne(1L);
-    geolocationAttributes.setSelf("https://your-hostname.com/api/locations");
-    geolocationAttributesRepository.save(geolocationAttributes);
-
     responseThumbnail.setLinks(new ResponseThumbnailLinksMap("https://your-hostname.com/api/locations"));
 
-    ResponseGeolocationDataMap responseGeolocationDataMap = new ResponseGeolocationDataMap();
-    responseGeolocationDataMap.setLat(geolocationAttributes.getLat());
-    responseGeolocationDataMap.setLongtitude(geolocationAttributes.getLongitude());
-    responseGeolocationDataMap.setName(geolocationAttributes.getName());
+    ArrayList<GeolocationAttributes> geolocationAttributes = geolocationAttributesRepository.findAll();
+    List<ResponseThumbnailDataMap> allResponseThumbnailDataMap = new ArrayList<>();
+    for(GeolocationAttributes actual : geolocationAttributes) {
+      ResponseGeolocationDataMap responseGeolocationDataMap = new ResponseGeolocationDataMap();
+      ResponseThumbnailDataMap responseThumbnailDataMap = new ResponseThumbnailDataMap();
+      responseGeolocationDataMap.setLat(actual.getLat());
+      responseGeolocationDataMap.setLongtitude(actual.getLongitude());
+      responseGeolocationDataMap.setName(actual.getName());
+      responseThumbnailDataMap.setId(actual.getId());
+      responseThumbnailDataMap.setType(actual.getType());
+      responseThumbnailDataMap.setAttributes(responseGeolocationDataMap);
+      allResponseThumbnailDataMap.add(responseThumbnailDataMap);
+    }
 
-    ResponseThumbnailDataMap responseThumbnailDataMap = new ResponseThumbnailDataMap();
-    responseThumbnailDataMap.setId(geolocationAttributes.getId());
-    responseThumbnailDataMap.setType(geolocationAttributes.getType());
-    responseThumbnailDataMap.setAttributes(responseGeolocationDataMap);
 
-    responseThumbnail.setData(responseThumbnailDataMap);
+
+
+    responseThumbnail.setData(allResponseThumbnailDataMap);
     return responseThumbnail;
 
   }
