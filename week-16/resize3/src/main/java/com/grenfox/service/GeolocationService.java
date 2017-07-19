@@ -56,7 +56,7 @@ public class GeolocationService {
     geolocationAttributes.setType(incomingGeolocationData.getData().getType());
     geolocationAttributesRepository.save(geolocationAttributes);
 
-    responseThumbnail.setLinks(new ResponseThumbnailLinksMap("https://your-hostname.com/api/locations/" + geolocationAttributes.getId() ));
+    responseThumbnail.setLinks(new ResponseThumbnailLinksMap("https://your-hostname.com/api/locations/" + geolocationAttributes.getId()));
 
     ResponseGeolocationDataMap responseGeolocationDataMap = new ResponseGeolocationDataMap();
     responseGeolocationDataMap.setName(incomingGeolocationData.getData().getAttributes().getName());
