@@ -50,8 +50,8 @@ public class ThumbnailService {
   }
 
   public ThumbnailData setThumbnailData(ThumbnailData thumbnailData) {
-//    ThumbnailData newThumbnailData = new ThumbnailData();
-//    thumbnailDataRepository.save(newThumbnailData);
+    ThumbnailData newThumbnailData = new ThumbnailData();
+    thumbnailDataRepository.save(newThumbnailData);
     thumbnailData.setType(thumbnailData.getType());
     thumbnailData.setAttributes(setThumbnailAttributesFields(thumbnailData));
     thumbnailDataRepository.save(newThumbnailData);
