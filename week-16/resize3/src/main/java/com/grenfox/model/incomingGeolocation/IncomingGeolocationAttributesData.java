@@ -1,20 +1,20 @@
-package com.grenfox.model.response;
+package com.grenfox.model.incomingGeolocation;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ResponseGeolocationDataMap {
+public class IncomingGeolocationAttributesData {
   String name;
   double lat;
   @JsonProperty("long")
   double longitude;
 
-  public ResponseGeolocationDataMap(String name, double lat, double longtitude) {
+  public IncomingGeolocationAttributesData(String name, double lat, double longitude) {
     this.name = name;
     this.lat = lat;
-    this.longitude = longtitude;
+    this.longitude = longitude;
   }
 
-  public ResponseGeolocationDataMap() {
+  public IncomingGeolocationAttributesData() {
   }
 
   public String getName() {

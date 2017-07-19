@@ -20,6 +20,9 @@ public class GeolocationAttributes {
   public GeolocationAttributes() {
   }
 
+  public GeolocationAttributes(long id) {
+  }
+
   public long getId() {
     return id;
   }
