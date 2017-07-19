@@ -1,4 +1,4 @@
-package com.greenfox.controllers;
+﻿package com.greenfox.controllers;
 
 import com.greenfox.model.Note;
 import com.greenfox.repository.NoteRepo;
@@ -14,12 +14,11 @@ import static java.awt.SystemColor.text;
 @Controller
 public class NoteController {
 
-  @Autowired //note ctrllerben példánosítunk egy noteRepo-t
+  @Autowired
     NoteRepo noteRepo;
 
   @RequestMapping("/")
   public String index(Model model) {
-    //noteRepo.save(new Note("my first note")); //save, delete (id-vel), lekérés note típussal(id-val)
     model.addAttribute("notes", noteRepo.findAll());
     return "index";
   }
